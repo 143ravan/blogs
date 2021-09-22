@@ -10,11 +10,11 @@
         class="blog--header__image"
       >
     </div>
-    <div class="blog--articles m-t-90">
-      <div class="blog--articles__title font-48 font-weight-bold">
+    <div class="blog--articles">
+      <div class="blog--articles__title font-weight-bold">
         Latest articles
       </div>
-      <div class="blog--articles__filter m-t-50 font-weight-bold">
+      <div class="blog--articles__filter font-weight-bold">
         <select
           class="select-box font-16 font-weight-bold padding-20"
           id="categories"
@@ -33,7 +33,7 @@
           </option>
         </select>
       </div>
-      <div class="blog--articles__card m-t-40">
+      <div class="blog--articles__card">
         <div
           v-for="post in cardList"
           :key="post.slug"
@@ -55,6 +55,7 @@
     *:focus {
       outline: none;
     }
+    background: #F1F1F1;
     &--header {
       position: relative;
       background-image: url('/assets/images/header.png');
@@ -73,37 +74,56 @@
         width: 100%;
         height: 90vh;
         color: #FFF;
+        font-size: 48px;
+
+        @media only screen and (max-width: 759px) {
+          font-size: 32px;
+        }
       }
     }
     &--articles {
-      padding: 90px 8% 40px;
+      padding: 10px 20px;
 
       @media only screen and (min-width: 760px) and (max-width: 1000px) {
         padding: 90px 4% 40px;
       }
-      @media only screen and (max-width: 759px) {
-        padding: 90px 20px 40px;
+      @media only screen and (min-width: 1000px) {
+        padding: 90px 8% 40px;
+      }
+      &__title {
+        font-size: 48px;
+
+        @media only screen and (max-width: 759px) {
+          font-size: 32px;
+        }
       }
 
       &__filter {
         width: 280px;
+        margin-top: 10px;
+
+        @media only screen and (min-width: 760px) {
+          margin-top: 50px;
+        }
 
         .select-box {
           border: none;
           border-radius: 2px;
-          box-shadow: 0 0px 0px 1px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 0 16px -4px rgba(0, 0, 0, 0.12);
         }
       }
       &__card {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 20px;
+        margin-top: 40px;
 
         @media only screen and (min-width: 760px) and (max-width: 1000px) {
           grid-template-columns: repeat(3, 1fr);
         }
         @media only screen and (max-width: 759px) {
-          grid-template-columns: repeat(2, 1fr);
+          display: block;
+          margin-top: 0px;
         }
       }
     }

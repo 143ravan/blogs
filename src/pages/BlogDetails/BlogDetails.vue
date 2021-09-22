@@ -5,7 +5,7 @@
       class="blog-details--image"
       alt="featured_image">
     <div class="blog-details--content">
-      <div class="font-48 font-weight-bold">
+      <div class="title font-weight-bold">
         {{ blogDetails.title }}
       </div>
       <div class="flex m-t-10">
@@ -35,13 +35,27 @@
   .blog-details {
     &--image {
       width: 100%;
-      height: 90vh;
+
+      @media only screen and (min-width: 760px) {
+        height: 90vh;
+      }
     }
     &--content {
       padding: 50px 20%;
       
-      @media only screen and (max-width: 1000px) {
+      @media only screen and (min-width: 760px) and (max-width: 1000px) {
         padding: 50px 10%;
+      }
+      @media only screen and (max-width: 759px) {
+        padding: 50px 20px;
+      }
+
+      .title {
+        font-size: 48px;
+
+        @media only screen and (max-width: 759px) {
+          font-size: 32px;
+        }
       }
       &__profile {
         margin: 10px 0 0 10px;

@@ -24,8 +24,18 @@
   .card {
     border-radius: 2px;
     cursor: pointer;
-    box-shadow: 0 0px 0px 1px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 0 16px -4px rgba(0, 0, 0, 0.12);
 
+    background: #FFF;
+    margin-top: 20px;
+
+    &--title, &--description {
+      padding: 20px;
+
+      @media only screen and (max-width: 759px) {
+        padding: 20px 10px;
+      }
+    }
     &--avatar {
       height: 120px;
       width: 100%;

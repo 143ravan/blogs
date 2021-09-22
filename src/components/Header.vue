@@ -24,7 +24,7 @@
 <style scoped>
   .header {
     padding: 10px 50px;
-    box-shadow: 0 2px 20px 0 hsl(0deg 0% 72% / 15%);
+    box-shadow: 0 0 16px -4px rgba(0, 0, 0, 0.12);
 
   }
   .logo {

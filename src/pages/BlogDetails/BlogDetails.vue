@@ -70,3 +70,16 @@
     }
   }
 </style>
+<style lang="scss">
+  .blog-details {
+    .post-content {
+      img {
+        height: 200px;
+        width: 100%;
+      }
+      figure {
+        margin: 0;
+      }
+    }
+  }
+</style>
